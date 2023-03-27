@@ -1,14 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="bg-hero bg-cover w-screen h-screen overflow-hidden">
+  <section
+    class="bg-hero-mobile md:bg-hero-tablet lg:bg-hero-desktop relative bg-100% xl:bg-cover w-screen h-screen max-h-screen overflow-hidden"
+  >
     <nav
-      class="max-w-7xl pt-7 2xl:pt-[48px] pb-8 mx-auto flex items-center justify-between"
+      class="max-w-7xl mx-4 md:mx-10 absolute inset-x-0 top-0 pt-4 md:pt-7 2xl:pt-[48px] pb-8 xl:mx-auto flex items-center justify-between"
     >
       <div class="logo">
         <img src="./assets/hourglass.svg" width="32" height="32" />
       </div>
-      <div class="flex items-center gap-x-20">
+      <div class="hidden md:flex items-center gap-x-20">
         <div class="flex items-center gap-x-[10px] cursor-pointer">
           <img src="./assets/stack.svg" width="30" height="30" />
           <span class="uppercase font-bold !leading-[1.2]">Features</span>
@@ -23,18 +25,27 @@
         </div>
       </div>
       <button
-        class="button-default whitespace-nowrap uppercase font-bold hover:text-[#121316] hover:bg-white hover:scale-105 active:scale-100 transition-all duration-300 ease-in"
+        class="button-default text-sm md:text-base whitespace-nowrap uppercase font-bold hover:text-[#121316] hover:bg-white hover:scale-105 active:scale-100 transition-all duration-300 ease-in"
       >
         Sign In
       </button>
     </nav>
-    <div class="max-w-7xl mx-auto">
-      <div class="w-[500px] my-auto">
-        <span class="columns gap-x-[10px] whitespace-nowrap mb-4 2xl:mb-[30px]"
+    <div
+      class="max-w-7xl mx-4 md:mx-10 md:mt-8 xl:mx-auto h-full flex flex-col justify-around"
+    >
+      <div class="md:w-[500px] h-fit">
+        <span
+          class="updated-span text-sm md:text-base cursor-pointer gax-x-[4px] md:gap-x-[8px] whitespace-nowrap mb-4 2xl:mb-[30px]"
           >Updated for iOS 16
-          <img src="./assets/arrow-right.svg" width="16" height="16"
+          <img
+            src="./assets/arrow-right.svg"
+            width="16"
+            height="16"
+            class="arrow-right"
         /></span>
-        <h1 class="font-extrabold text-6xl !leading-[1.2] mb-4 2xl:mb-[30px]">
+        <h1
+          class="font-extrabold text-4xl sm:text-5xl md:text-6xl !leading-[1.2] mb-4 2xl:mb-[30px]"
+        >
           Meet Move <br />
           The best app <br />
           for active people
@@ -44,7 +55,7 @@
           including self-diagnosis or consultation with a doctor, and are only
           designed for general fitness and wellness purposes.
         </p>
-        <div class="flex items-center gap-x-5">
+        <div class="flex flex-col md:flex-row md:items-center gap-5">
           <button class="button-gradient text-black font-semibold">
             <img src="./assets/app-window.svg" class="mr-4" /> Get the App
           </button>
@@ -65,26 +76,50 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #ff75a1 0%, rgb(26, 64, 255) 100%);
+  overflow: visible;
   position: relative;
-  border-radius: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.columns {
+.arrow-right {
+  animation: bounce-right 1.5s infinite;
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+}
+
+.updated-span {
   width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 16px 4px 16px;
+  padding: 4px 16px;
   background-color: rgba(255, 255, 255, 0.1);
-  overflow: visible;
-  position: relative;
   align-content: center;
-  flex-wrap: nowrap;
   gap: 10;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .updated-span {
+    padding: 2px 10px 2px 8px;
+  }
 }
 .button-default {
   box-sizing: border-box;
@@ -114,6 +149,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   align-items: center;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);

@@ -4,5 +4,5 @@
 
 html,
 body {
-  @apply min-h-screen bg-[#121316] text-white font-manrope;
+  @apply min-h-screen bg-[#121316] text-white font-manrope antialiased scroll-smooth;
 }
