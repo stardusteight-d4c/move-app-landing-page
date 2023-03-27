@@ -4,5 +4,21 @@
 
 html,
 body {
-  @apply min-h-screen bg-[#121316] text-white font-manrope antialiased scroll-smooth;
+  @apply min-h-screen max-w-[100vw] overflow-x-hidden bg-[#121316] text-white font-manrope antialiased scroll-smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+::-moz-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: linear-gradient(115deg, #ffb3b3 0%, hsl(240, 100%, 65%) 100%);
+  border-radius: 20px;
 }

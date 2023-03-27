@@ -12,4 +12,10 @@ export { default as stripeLogo } from './stripe-logo.svg'
 export { default as instagramLogo } from './instagram-logo.svg'
 export { default as slackLogo } from './slack-logo.svg'
 
+export { default as heart } from './heart.svg'
+export { default as handHeart } from './hand-heart.svg'
+export { default as batteryFull } from './battery-full.svg'
+
+
+
 
