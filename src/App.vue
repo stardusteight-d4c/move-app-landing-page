@@ -33,6 +33,7 @@
     <div
       class="max-w-7xl mx-4 md:mx-10 md:mt-8 xl:mx-auto h-full flex flex-col justify-around"
     >
+    
       <div class="md:w-[500px] h-fit">
         <span
           class="updated-span text-sm md:text-base cursor-pointer gax-x-[4px] md:gap-x-[8px] whitespace-nowrap mb-4 2xl:mb-[30px]"
