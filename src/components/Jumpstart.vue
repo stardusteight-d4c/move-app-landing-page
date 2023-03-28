@@ -115,7 +115,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
       <!-- Third Section -->
       <div class="max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]">
         <img :src="rocket" width="60" height="60" class="mx-auto" />
-        <h2 class="font-extrabold text-[50px] !leading-[1.2]">
+        <h2 class="font-extrabold text-4xl md:text-[50px] !leading-[1.2]">
           Jumpstart your motivation to high gear
         </h2>
         <p class="text-lg !leading-[1.2]">

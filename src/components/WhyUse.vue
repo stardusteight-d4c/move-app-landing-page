@@ -11,8 +11,8 @@ import {
 
 <template>
   <section class="bg-wallpaper-2 bg-cover py-[100px] w-screen">
-    <div class="max-w-7xl mx-auto flex items-center gap-x-[50px]">
-      <div class="w-[400px] flex flex-col items-center gap-y-[31px] text-center">
+    <div class="max-w-7xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center gap-x-[50px] llg:gap-x-[18px] xl:gap-x-[50px]">
+      <div class="w-full max-w-[400px] flex flex-col items-center gap-y-[31px] text-center">
         <img
           :src="target"
           alt="target/icon"
@@ -20,7 +20,7 @@ import {
           height="60"
           class="mx-auto"
         />
-        <h2 class="font-extrabold text-[50px] !leading-[1.2]">
+        <h2 class="font-extrabold text-4xl md:text-[50px] !leading-[1.2]">
           Why you should use this app
         </h2>
         <p class="text-lg !leading-[1.2]">
@@ -78,7 +78,7 @@ import {
           </p>
         </div>
       </div>
-      <div class="white-card">
+      <div class="white-card hidden llg:flex">
         <h3 class="text-[22px] font-bold flex items-center gap-x-[10px]">
           <img
             width="30"
@@ -126,8 +126,9 @@ import {
 .card-workout {
   box-sizing: border-box;
   flex-shrink: 0;
-  width: 360px;
-  height: min-content; /* 384px */
+  max-width: 360px;
+  width: 100%;
+  height: min-content; 
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -145,8 +146,9 @@ import {
 .card-glassmorphism {
   box-sizing: border-box;
   flex-shrink: 0;
-  width: 360px;
-  height: min-content; /* 496px */
+  max-width: 360px;
+  width: 100%;
+  height: min-content; 
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -192,7 +194,6 @@ import {
   color: black;
   width: 360px;
   height: min-content; /* 428px */
-  display: flex;
   flex-direction: column;
   row-gap: 10px;
   justify-content: flex-start;
