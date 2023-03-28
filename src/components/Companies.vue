@@ -12,7 +12,7 @@ import {
 </script>
 
 <template>
-  <section class="bg-[#121316] relative py-[100px] w-screen">
+  <section class="top-inset-shadow bg-[#121316] relative py-[100px] w-screen">
     <div
       class="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center"
     >
@@ -29,19 +29,19 @@ import {
       <div
         class="grid grid-cols-2 gap-8 md:flex items-center gap-x-[80px] mmd:gap-x-[120px]"
       >
-        <div class="logo-company shadow-md shadow-black/50 flex col-span-1">
+        <div class="logo-company shadow-drop flex col-span-1">
           <img :src="framerLogo" width="32" height="32" alt="Framer" />
         </div>
-        <div class="logo-company shadow-md shadow-black/50 flex col-span-1">
+        <div class="logo-company shadow-drop flex col-span-1">
           <img :src="appleLogo" width="32" height="32" alt="Apple" />
         </div>
-        <div class="logo-company shadow-md shadow-black/50 hidden md:flex">
+        <div class="logo-company shadow-drop hidden md:flex">
           <img :src="stripeLogo" width="32" height="32" alt="Stripe" />
         </div>
-        <div class="logo-company shadow-md shadow-black/50 flex col-span-1">
+        <div class="logo-company shadow-drop flex col-span-1">
           <img :src="instagramLogo" width="32" height="32" alt="Instagram" />
         </div>
-        <div class="logo-company shadow-md shadow-black/50 flex col-span-1">
+        <div class="logo-company shadow-drop flex col-span-1">
           <img :src="slackLogo" width="32" height="32" alt="Slack" />
         </div>
       </div>
@@ -51,7 +51,7 @@ import {
         class="grid grid-cols-1 mdd:grid-cols-3 gap-y-8 mdd:gap-[10px] mx-4 mmd:mx-0 mmd:gap-x-[30px]"
       >
         <div
-          class="col-span-1 shadow-md shadow-black/50 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
+          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
           <img :src="heart" alt="pen/icon" />
           <h4 class="font-bold">Quality of life</h4>
@@ -61,7 +61,7 @@ import {
           </p>
         </div>
         <div
-          class="col-span-1 shadow-md shadow-black/50 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
+          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
           <img :src="handHeart" alt="pen/icon" />
           <h4 class="font-bold">More performance</h4>
@@ -71,7 +71,7 @@ import {
           </p>
         </div>
         <div
-          class="col-span-1 shadow-md shadow-black/50 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
+          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
           <img :src="batteryFull" alt="pen/icon" />
           <h4 class="font-bold">Full energy</h4>
@@ -86,6 +86,16 @@ import {
 </template>
 
 <style scoped>
+.top-inset-shadow {
+  -webkit-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+  box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+}
+.shadow-drop {
+  -webkit-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
+}
 .logo-company {
   background-color: #00000066;
   width: 64px;
