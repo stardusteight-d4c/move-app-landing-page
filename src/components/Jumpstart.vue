@@ -3,7 +3,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
 </script>
 
 <template>
-  <section class="bg-[#121316] py-[100px] min-h-screen w-screen">
+  <section class="bottom-inset-shadow bg-[#121316] py-[100px] min-h-screen w-screen">
     <div class="max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto">
       <!-- First Section -->
       <div class="hidden llg:flex flex-col items-center gap-y-[50px]">
@@ -145,6 +145,11 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
 </template>
 
 <style scoped>
+.bottom-inset-shadow {
+  -webkit-box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
+  box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
+}
 .card {
   flex-shrink: 0;
   width: 300px;
