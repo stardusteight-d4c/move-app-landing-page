@@ -4,9 +4,9 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
 
 <template>
   <section class="bg-[#121316] py-[100px] min-h-screen w-screen">
-    <div class="max-w-7xl justify-center flex gap-x-[50px] mx-auto">
+    <div class="max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto">
       <!-- First Section -->
-      <div class="flex flex-col items-center gap-y-[50px]">
+      <div class="hidden llg:flex flex-col items-center gap-y-[50px]">
         <div class="card bg-card-1">
           <div class="card-info mt-[100%]">
             <div>
@@ -77,7 +77,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
             </div>
           </div>
         </div>
-        <div class="card-info items-center">
+        <div class="card-info max-w-[300px] items-center">
           <div>
             <h3 class="font-bold text-[22px]">Lac Superieur</h3>
             <span class="text-[#FFFFFF]/40 block font-medium">30 mins ago</span>
@@ -113,7 +113,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
         </div>
       </div>
       <!-- Third Section -->
-      <div class="w-[400px] text-center flex flex-col gap-y-[31px]">
+      <div class="max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]">
         <img :src="rocket" width="60" height="60" class="mx-auto" />
         <h2 class="font-extrabold text-[50px] !leading-[1.2]">
           Jumpstart your motivation to high gear
@@ -130,7 +130,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
         </button>
         <div class="h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto" />
         <div
-          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
+          class="shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
           <img :src="plugsConnected" alt="" />
           <h4 class="font-bold">Amazing integrations</h4>
