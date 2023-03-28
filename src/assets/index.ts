@@ -21,6 +21,16 @@ export { default as rocket } from './rocket.svg'
 export { default as cards } from './cards.svg'
 export { default as plugsConnected } from './plugs-connected.svg'
 
+export { default as target } from './target.svg'
+export { default as download } from './download.svg'
+
+export { default as undrawCollaborators } from './flat-art/undraw_collaborators_re_hont.svg'
+export { default as undrawTeamWork } from './flat-art/undraw_team_work_k-80-m.svg'
+export { default as personSimpleWalk } from './person-simple-walk.svg'
+
+
+
+
 
 
 

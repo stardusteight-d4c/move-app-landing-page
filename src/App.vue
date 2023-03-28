@@ -2,10 +2,12 @@
 import Hero from './components/Hero.vue'
 import Companies from './components/Companies.vue'
 import Jumpstart from './components/Jumpstart.vue'
+import WhyUse from './components/WhyUse.vue'
 </script>
 
 <template>
   <Hero />
   <Companies /> 
   <Jumpstart />
+  <WhyUse />
 </template>

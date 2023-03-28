@@ -7,7 +7,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
     <div class="max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto">
       <!-- First Section -->
       <div class="hidden llg:flex flex-col items-center gap-y-[50px]">
-        <div class="card bg-card-1">
+        <div class="card bg-wallpaper-1">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -26,7 +26,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
             </div>
           </div>
         </div>
-        <div class="card bg-card-2">
+        <div class="card bg-wallpaper-2">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -92,7 +92,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
             >
           </div>
         </div>
-        <div class="card bg-card-3">
+        <div class="card bg-wallpaper-3">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -118,7 +118,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
         <h2 class="font-extrabold text-[50px] !leading-[1.2]">
           Jumpstart your motivation to high gear
         </h2>
-        <p class="text-lg !leading-[1.2">
+        <p class="text-lg !leading-[1.2]">
           Blood Oxygen app measurements are not intended for medical use,
           including self-diagnosis or consultation with a doctor, and are only
           designed for general fitness and wellness purposes.
