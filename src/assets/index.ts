@@ -16,6 +16,12 @@ export { default as heart } from './heart.svg'
 export { default as handHeart } from './hand-heart.svg'
 export { default as batteryFull } from './battery-full.svg'
 
+export { default as personSimpleRun } from './person-simple-run.svg'
+export { default as rocket } from './rocket.svg'
+export { default as cards } from './cards.svg'
+export { default as plugsConnected } from './plugs-connected.svg'
+
+
 
 
 
