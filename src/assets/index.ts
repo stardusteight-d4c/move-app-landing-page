@@ -25,13 +25,5 @@ export { default as target } from './target.svg'
 export { default as download } from './download.svg'
 
 export { default as undrawCollaborators } from './flat-art/undraw_collaborators_re_hont.svg'
-export { default as undrawTeamWork } from './flat-art/undraw_team_work_k-80-m.svg'
 export { default as personSimpleWalk } from './person-simple-walk.svg'
-
-
-
-
-
-
-
-
+export { default as medal } from './medal.svg'
