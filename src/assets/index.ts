@@ -27,3 +27,7 @@ export { default as download } from './download.svg'
 export { default as undrawCollaborators } from './flat-art/undraw_collaborators_re_hont.svg'
 export { default as personSimpleWalk } from './person-simple-walk.svg'
 export { default as medal } from './medal.svg'
+
+export { default as pen } from './pen.svg'
+export { default as info } from './info.svg'
+

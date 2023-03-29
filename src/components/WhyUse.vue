@@ -11,8 +11,12 @@ import {
 
 <template>
   <section class="bg-wallpaper-2 bg-cover py-[100px] w-screen">
-    <div class="max-w-7xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center gap-x-[50px] llg:gap-x-[18px] xl:gap-x-[50px]">
-      <div class="w-full max-w-[400px] flex flex-col items-center gap-y-[31px] text-center">
+    <div
+      class="max-w-7xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center gap-x-[50px] llg:gap-x-[18px] xl:gap-x-[50px]"
+    >
+      <div
+        class="w-full max-w-[400px] flex flex-col items-center gap-y-[31px] text-center"
+      >
         <img
           :src="target"
           alt="target/icon"
@@ -64,10 +68,12 @@ import {
             class="my-4"
           />
           <div class="flex items-center gap-x-[10px]">
-            <span class="span-glassmorphism cursor-default uppercase font-semibold"
+            <span
+              class="span-glassmorphism cursor-default uppercase font-semibold"
               >light</span
             >
-            <span class="span-glassmorphism cursor-default uppercase font-semibold"
+            <span
+              class="span-glassmorphism cursor-default uppercase font-semibold"
               >tracking</span
             >
           </div>
@@ -78,7 +84,8 @@ import {
           </p>
         </div>
       </div>
-      <div class="white-card hidden llg:flex">
+
+      <div  class="white-card hidden llg:flex">
         <h3 class="text-[22px] font-bold flex items-center gap-x-[10px]">
           <img
             width="30"
@@ -128,7 +135,7 @@ import {
   flex-shrink: 0;
   max-width: 360px;
   width: 100%;
-  height: min-content; 
+  height: min-content;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -148,7 +155,7 @@ import {
   flex-shrink: 0;
   max-width: 360px;
   width: 100%;
-  height: min-content; 
+  height: min-content;
   display: flex;
   flex-direction: column;
   row-gap: 10px;

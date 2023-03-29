@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { hourglass, stack, sealCheck, files } from '../assets'
+import Stack from '../atoms/icons/Stack.vue';
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import { hourglass, stack, sealCheck, files } from '../assets'
     </div>
     <div class="hidden md:flex items-center gap-x-20">
       <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <img :src="stack" width="30" height="30" />
+        <Stack  color="#FFFFFF" width="30" height="30" />
         <span class="uppercase font-bold !leading-[1.2]">Features</span>
       </div>
       <div class="flex items-center gap-x-[10px] cursor-pointer">

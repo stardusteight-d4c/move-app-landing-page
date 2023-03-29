@@ -16,6 +16,7 @@ module.exports = {
 
     fontFamily: {
       manrope: 'Manrope, sans-serif',
+      inter: 'Inter, sans-serif',
     },
     extend: {
       backgroundSize: {
@@ -28,8 +29,9 @@ module.exports = {
         'wallpaper-1': "url('/wallpaper1.jpg')",
         'wallpaper-2': "url('/wallpaper2.jpg')",
         'wallpaper-3': "url('/wallpaper3.jpg')",
-        'men': "url('/men.jpg')",
-        'woman': "url('/woman.jpg')",
+        'wallpaper-4': "url('/wallpaper4.png')",
+        men: "url('/men.jpg')",
+        woman: "url('/woman.jpg')",
       },
     },
   },

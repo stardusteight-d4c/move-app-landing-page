@@ -4,6 +4,7 @@ import Companies from './components/Companies.vue'
 import Jumpstart from './components/Jumpstart.vue'
 import WhyUse from './components/WhyUse.vue'
 import GetTheApp from './components/GetTheApp.vue'
+import ReadyToStart from './components/ReadyToStart.vue'
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import GetTheApp from './components/GetTheApp.vue'
   <Jumpstart />
   <WhyUse />
   <GetTheApp />
+  <ReadyToStart />
 </template>
