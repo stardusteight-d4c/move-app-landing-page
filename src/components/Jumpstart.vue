@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
+import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
 </script>
 
 <template>
   <section class="bottom-inset-shadow bg-[#121316] py-[100px] w-screen">
-    <div class="max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto">
+    <div
+      class="max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto"
+    >
       <!-- First Section -->
       <div class="hidden llg:flex flex-col items-center gap-y-[50px]">
         <div class="card bg-wallpaper-1">
@@ -52,8 +54,7 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
           <h2
             class="flex items-center font-bold text-[22px] gap-x-[10px] mb-[20px]"
           >
-            <img width="30" height="30" :src="personSimpleRun" />Close Your
-            Rings
+            <PersonSimpleRun width="30" height="30" />Close Your Rings
           </h2>
           <p class="font-medium text-sm w-[260px] mb-[20px]">
             Close your Move ring by hitting your personal goal of active
@@ -113,8 +114,10 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
         </div>
       </div>
       <!-- Third Section -->
-      <div class="max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]">
-        <img :src="rocket" width="60" height="60" class="mx-auto" />
+      <div
+        class="max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]"
+      >
+        <Rocket class="w-[60px] h-[60px] mx-auto text-[#BB66CC]" />
         <h2 class="font-extrabold text-4xl md:text-[50px] !leading-[1.2]">
           Jumpstart your motivation to high gear
         </h2>
@@ -126,13 +129,15 @@ import { personSimpleRun, rocket, cards, plugsConnected } from '../assets'
         <button
           class="button-learn-more mx-auto uppercase text-black font-semibold flex items-center gap-x-4"
         >
-          <img :src="cards" />learn more
+          <Cards />learn more
         </button>
-        <div class="h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto" />
+        <div
+          class="h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto"
+        />
         <div
           class="shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
-          <img :src="plugsConnected" alt="" />
+          <PlugsConnected />
           <h4 class="font-bold">Amazing integrations</h4>
           <p class="text-center text-sm font-medium text-white/70">
             Grow your business, reach new audiences, and hit your goals with

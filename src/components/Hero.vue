@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Navbar from './Navbar.vue'
-import { arrowRight, appWindow, play } from '../assets'
+import { ArrowRight, AppWindow, Play } from './atoms/icons'
 </script>
 
 <template>
@@ -15,7 +15,7 @@ import { arrowRight, appWindow, play } from '../assets'
         <span
           class="updated-span text-sm md:text-base cursor-pointer gax-x-[4px] md:gap-x-[8px] whitespace-nowrap mb-4 2xl:mb-[30px]"
           >Updated for iOS 16
-          <img :src="arrowRight" width="16" height="16" class="arrow-right"
+          <ArrowRight width="16" height="16" class="arrow-right"
         /></span>
         <h1
           class="font-extrabold text-4xl sm:text-5xl md:text-6xl !leading-[1.2] mb-4 2xl:mb-[30px]"
@@ -31,10 +31,10 @@ import { arrowRight, appWindow, play } from '../assets'
         </p>
         <div class="flex flex-col md:flex-row md:items-center gap-5">
           <button class="button-gradient text-black font-semibold">
-            <img :src="appWindow" class="mr-4" /> Get the App
+            <AppWindow class="mr-4" /> Get the App
           </button>
           <button class="button-blur text-white font-semibold">
-            <img :src="play" class="mr-4" /> Watch video
+            <Play class="mr-4 text-[#FF88AA]" /> Watch video
           </button>
         </div>
       </div>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import DonutChart from './integrate/DonutChart.vue'
 import {
-  target,
-  download,
-  plugsConnected,
-  undrawCollaborators,
-  personSimpleWalk,
-} from '../assets'
+  Target,
+  Download,
+  PlugsConnected,
+  PersonSimpleWalk,
+} from './atoms/icons'
+import { undrawCollaborators } from '../assets'
 </script>
 
 <template>
@@ -17,13 +17,7 @@ import {
       <div
         class="w-full max-w-[400px] flex flex-col items-center gap-y-[31px] text-center"
       >
-        <img
-          :src="target"
-          alt="target/icon"
-          width="60"
-          height="60"
-          class="mx-auto"
-        />
+        <Target class="w-[60px] h-[60px] text-[#30ADFF] mx-auto" />
         <h2 class="font-extrabold text-4xl md:text-[50px] !leading-[1.2]">
           Why you should use this app
         </h2>
@@ -35,7 +29,7 @@ import {
         <button
           class="download-button text-black font-semibold uppercase gap-x-4"
         >
-          <img :src="download" alt="" />Download
+          <Download />Download
         </button>
         <div
           class="h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto"
@@ -43,7 +37,7 @@ import {
         <div
           class="shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
-          <img :src="plugsConnected" alt="" />
+          <PlugsConnected />
           <h4 class="font-bold">Amazing integrations</h4>
           <p class="text-center text-sm font-medium text-white/70">
             Grow your business, reach new audiences, and hit your goals with
@@ -85,14 +79,9 @@ import {
         </div>
       </div>
 
-      <div  class="white-card hidden llg:flex">
+      <div class="white-card hidden llg:flex">
         <h3 class="text-[22px] font-bold flex items-center gap-x-[10px]">
-          <img
-            width="30"
-            height="30"
-            :src="personSimpleWalk"
-            alt="person-run/svg"
-          />Activity
+          <PersonSimpleWalk width="30" height="30" />Activity
         </h3>
         <span class="font-semibold">3,054 Steps</span>
         <p class="font-medium mx-[20px]">

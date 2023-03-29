@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { hourglass, stack, sealCheck, files } from '../assets'
-import Stack from '../atoms/icons/Stack.vue';
+import { Hourglass, Stack, SealCheck, Files } from './atoms/icons'
 </script>
 
 <template>
@@ -8,19 +7,19 @@ import Stack from '../atoms/icons/Stack.vue';
     class="max-w-7xl mx-4 md:mx-10 absolute inset-x-0 top-0 pt-4 md:pt-7 2xl:pt-[48px] pb-8 xl:mx-auto flex items-center justify-between"
   >
     <div class="logo">
-      <img :src="hourglass" width="32" height="32" />
+      <Hourglass width="32" height="32" />
     </div>
     <div class="hidden md:flex items-center gap-x-20">
       <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <Stack  color="#FFFFFF" width="30" height="30" />
+        <Stack color="#FFFFFF" width="30" height="30" />
         <span class="uppercase font-bold !leading-[1.2]">Features</span>
       </div>
       <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <img :src="sealCheck" width="30" height="30" />
+        <SealCheck width="30" height="30" />
         <span class="uppercase font-bold !leading-[1.2]">Community</span>
       </div>
       <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <img :src="files" width="30" height="30" />
+        <Files width="30" height="30" />
         <span class="uppercase font-bold !leading-[1.2]">Docs</span>
       </div>
     </div>

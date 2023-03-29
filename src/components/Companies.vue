@@ -1,13 +1,11 @@
 <script setup lang="ts">
+import { Heart, HandHeart, BatteryFull } from './atoms/icons'
 import {
   framerLogo,
   appleLogo,
   stripeLogo,
   instagramLogo,
   slackLogo,
-  heart,
-  handHeart,
-  batteryFull,
 } from '../assets'
 </script>
 
@@ -53,7 +51,7 @@ import {
         <div
           class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
-          <img :src="heart" alt="pen/icon" />
+          <Heart />
           <h4 class="font-bold">Quality of life</h4>
           <p class="text-center text-sm font-medium text-white/70">
             Control the health of your team. Offer rewards and have a more
@@ -63,7 +61,7 @@ import {
         <div
           class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
-          <img :src="handHeart" alt="pen/icon" />
+          <HandHeart />
           <h4 class="font-bold">More performance</h4>
           <p class="text-center text-sm font-medium text-white/70">
             A healthier team is a more active, creative and inspiring team for
@@ -73,7 +71,7 @@ import {
         <div
           class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
         >
-          <img :src="batteryFull" alt="pen/icon" />
+          <BatteryFull />
           <h4 class="font-bold">Full energy</h4>
           <p class="text-center text-sm font-medium text-white/70">
             Improve teamwork and deliver more results with a team full of

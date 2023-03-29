@@ -5,6 +5,7 @@ import Jumpstart from './components/Jumpstart.vue'
 import WhyUse from './components/WhyUse.vue'
 import GetTheApp from './components/GetTheApp.vue'
 import ReadyToStart from './components/ReadyToStart.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -14,4 +15,5 @@ import ReadyToStart from './components/ReadyToStart.vue'
   <WhyUse />
   <GetTheApp />
   <ReadyToStart />
+  <Footer />
 </template>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Plus from '../../atoms/icons/Plus.vue'
-import X from '../../atoms/icons/X.vue'
+import { Plus, X } from '../atoms/icons'
 
 defineProps({
   title: {

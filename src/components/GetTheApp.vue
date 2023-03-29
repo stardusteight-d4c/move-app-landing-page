@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import MinimalistB from './integrate/MinimalistB.vue'
-import { medal, appWindow } from '../assets'
+import { Medal, AppWindow } from './atoms/icons'
 </script>
 
 <template>
   <section class="top-inset-shadow bg-[#121316] py-[100px] w-screen">
-    <div class="flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]">
+    <div
+      class="flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]"
+    >
       <div class="md:w-[565px] sm:h-[620px]">
         <div class="relative w-fit h-fit">
           <MinimalistB />
@@ -27,7 +29,9 @@ import { medal, appWindow } from '../assets'
             </div>
             <h3 class="font-bold text-[22px] mt-[20px] ml-4">Super Shoes</h3>
           </div>
-          <div class="relative mt-28 ml-28 hidden sm:flex items-center justify-center">
+          <div
+            class="relative mt-28 ml-28 hidden sm:flex items-center justify-center"
+          >
             <div class="circle1 absolute z-40" />
             <div class="circle2 absolute z-30" />
             <div class="circle3 absolute z-20" />
@@ -36,7 +40,7 @@ import { medal, appWindow } from '../assets'
         </div>
       </div>
       <div class="max-w-[500px] lg:w-[400px] flex flex-col gap-y-[31px]">
-        <img :src="medal" width="60" height="60" alt="" />
+        <Medal class="text-[#FF7697] w-[60px] h-[60px]" />
         <h2 class="text-4xl md:text-[50px] font-extrabold !leading-[1.2]">
           Get the motivation you need every day.
         </h2>
@@ -45,7 +49,7 @@ import { medal, appWindow } from '../assets'
           personalized suggestions and encouragement to close your rings.
         </p>
         <button class="button-gradient text-black font-semibold">
-          <img :src="appWindow" class="mr-4" /> Get the App
+          <AppWindow class="mr-4" /> Get the App
         </button>
       </div>
     </div>
