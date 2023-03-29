@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-[265px] h-[320px] relative">
+  <div class="mx-auto sm:mx-0 w-[265px] h-[320px] relative">
     <i class="frame1" />
     <i class="frame2" />
     <i class="frame3" />

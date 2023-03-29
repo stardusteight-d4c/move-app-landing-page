@@ -5,11 +5,11 @@ import { medal, appWindow } from '../assets'
 
 <template>
   <section class="top-inset-shadow bg-[#121316] py-[100px] w-screen">
-    <div class="flex items-center justify-center gap-x-[134px]">
-      <div class="w-[565px] h-[620px]">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]">
+      <div class="sm:w-[565px] sm:h-[620px]">
         <div class="relative w-fit h-fit">
           <MinimalistB />
-          <div class="card-big z-50 -bottom-16 -right-[300px]">
+          <div class="card-big hidden sm:flex z-50 -bottom-16 -right-[300px]">
             <div class="background-image">
               <div
                 class="flex items-center gap-x-[10px] absolute bottom-4 left-4"
@@ -27,7 +27,7 @@ import { medal, appWindow } from '../assets'
             </div>
             <h3 class="font-bold text-[22px] mt-[20px] ml-4">Super Shoes</h3>
           </div>
-          <div class="relative mt-28 ml-28 flex items-center justify-center">
+          <div class="relative mt-28 ml-28 hidden sm:flex items-center justify-center">
             <div class="circle1 absolute z-40" />
             <div class="circle2 absolute z-30" />
             <div class="circle3 absolute z-20" />
@@ -35,9 +35,9 @@ import { medal, appWindow } from '../assets'
           </div>
         </div>
       </div>
-      <div class="w-[400px] flex flex-col gap-y-[31px]">
+      <div class="w-[500px] lg:w-[400px] flex flex-col gap-y-[31px]">
         <img :src="medal" width="60" height="60" alt="" />
-        <h2 class="text-[50px] font-extrabold !leading-[1.2]">
+        <h2 class="text-4xl md:text-[50px] font-extrabold !leading-[1.2]">
           Get the motivation you need every day.
         </h2>
         <p class="text-lg">
@@ -119,7 +119,6 @@ import { medal, appWindow } from '../assets'
   box-sizing: border-box;
   width: 360px;
   height: min-content;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 10px 10px 20px 10px;
