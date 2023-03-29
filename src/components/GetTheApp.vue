@@ -8,10 +8,10 @@ import { Medal, AppWindow } from './atoms/icons'
     <div
       class="flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]"
     >
-      <div class="md:w-[565px] sm:h-[620px]">
+      <div class="md:w-[565px] md:h-[620px]">
         <div class="relative w-fit h-fit">
           <MinimalistB />
-          <div class="card-big hidden sm:flex z-50 -bottom-16 -right-[300px]">
+          <div class="card-big hidden md:flex z-50 -bottom-16 -right-[300px]">
             <div class="background-image">
               <div
                 class="flex items-center gap-x-[10px] absolute bottom-4 left-4"
@@ -30,7 +30,7 @@ import { Medal, AppWindow } from './atoms/icons'
             <h3 class="font-bold text-[22px] mt-[20px] ml-4">Super Shoes</h3>
           </div>
           <div
-            class="relative mt-28 ml-28 hidden sm:flex items-center justify-center"
+            class="relative mt-28 ml-28 hidden md:flex items-center justify-center"
           >
             <div class="circle1 absolute z-40" />
             <div class="circle2 absolute z-30" />

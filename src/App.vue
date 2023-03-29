@@ -4,7 +4,7 @@ import Companies from './components/Companies.vue'
 import Jumpstart from './components/Jumpstart.vue'
 import WhyUse from './components/WhyUse.vue'
 import GetTheApp from './components/GetTheApp.vue'
-import ReadyToStart from './components/ReadyToStart.vue'
+import Plans from './components/Plans.vue'
 import Footer from './components/Footer.vue'
 </script>
 
@@ -14,6 +14,6 @@ import Footer from './components/Footer.vue'
   <Jumpstart />
   <WhyUse />
   <GetTheApp />
-  <ReadyToStart />
+  <Plans />
   <Footer />
 </template>

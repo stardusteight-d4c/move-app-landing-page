@@ -15,7 +15,7 @@ import {
 </script>
 
 <template>
-  <section class="bg-wallpaper-4 bottom-inset-shadow px-4 mt-[100px] pb-[100px] bg-cover">
+  <section class="bg-wallpaper-4 px-4 mt-[100px] pb-[100px] bg-cover">
     <div
       class="max-w-[500px] mx-auto gap-y-[30px] flex flex-col items-center justify-center"
     >
