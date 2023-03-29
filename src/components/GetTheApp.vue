@@ -6,7 +6,7 @@ import { medal, appWindow } from '../assets'
 <template>
   <section class="top-inset-shadow bg-[#121316] py-[100px] w-screen">
     <div class="flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]">
-      <div class="sm:w-[565px] sm:h-[620px]">
+      <div class="md:w-[565px] sm:h-[620px]">
         <div class="relative w-fit h-fit">
           <MinimalistB />
           <div class="card-big hidden sm:flex z-50 -bottom-16 -right-[300px]">
@@ -35,7 +35,7 @@ import { medal, appWindow } from '../assets'
           </div>
         </div>
       </div>
-      <div class="w-[500px] lg:w-[400px] flex flex-col gap-y-[31px]">
+      <div class="max-w-[500px] lg:w-[400px] flex flex-col gap-y-[31px]">
         <img :src="medal" width="60" height="60" alt="" />
         <h2 class="text-4xl md:text-[50px] font-extrabold !leading-[1.2]">
           Get the motivation you need every day.

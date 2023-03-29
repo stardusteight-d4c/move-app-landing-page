@@ -13,18 +13,18 @@ import Medal from '../atoms/icons/Medal.vue'
 </script>
 
 <template>
-  <section class="bg-wallpaper-4 mt-[100px] pb-[100px] bg-cover">
+  <section class="bg-wallpaper-4 px-4 mt-[100px] pb-[100px] bg-cover">
     <div
       class="max-w-[500px] mx-auto gap-y-[30px] flex flex-col items-center justify-center"
     >
-      <h2 class="font-extrabold text-[50px]">Ready to start?</h2>
+      <h2 class="font-extrabold text-4xl md:text-[50px]">Ready to start?</h2>
       <span class="text-[22px] font-bold text-center"
         >Launch a site for free. Choose a site plan to unlock more
         features.</span
       >
     </div>
     <div class="h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
-    <div class="flex items-center justify-center gap-x-[30px]">
+    <div class="flex items-center flex-col md:flex-row justify-center gap-y-[30px] gap-x-[30px]">
       <div class="card1">
         <div class="text-black flex flex-col items-center gap-y-[10px]">
           <h3
@@ -32,7 +32,7 @@ import Medal from '../atoms/icons/Medal.vue'
           >
             <Pen />Free plan
           </h3>
-          <h4 class="font-extrabold text-[50px]">$15/mo</h4>
+          <h4 class="font-extrabold text-4xl mmd:text-[50px]">$15/mo</h4>
           <span
             class="blur-capsule bg-black/10 border border-black/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
             >Up to 3 projects <Info width="16" height="16"
@@ -74,7 +74,7 @@ import Medal from '../atoms/icons/Medal.vue'
           >
             <Pen />starter plan
           </h3>
-          <h4 class="font-extrabold text-[50px]">$30/mo</h4>
+          <h4 class="font-extrabold text-4xl mmd:text-[50px]">$30/mo</h4>
           <span
             class="blur-capsule bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
             >Billed yearly <ToggleLeft width="16" height="16"
@@ -111,7 +111,7 @@ import Medal from '../atoms/icons/Medal.vue'
           >
             <Pen color="#FFFFFF" />pro plan
           </h3>
-          <h4 class="font-extrabold text-[50px]">$45/mo</h4>
+          <h4 class="font-extrabold text-4xl mmd:text-[50px]">$45/mo</h4>
           <span
             class="blur-capsule bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
             >Billed yearly <ToggleLeft width="16" height="16"
@@ -144,7 +144,7 @@ import Medal from '../atoms/icons/Medal.vue'
     </div>
     <div class="h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
     <div class="flex flex-col items-center justify-center">
-      <h2 class="font-extrabold text-[50px] mb-[30px]">FAQ</h2>
+      <h2 class="font-extrabold text-4xl md:text-[50px] mb-[30px]">FAQ</h2>
       <div class="flex flex-col items-center justify-center gap-y-[30px] w-full">
         <FaqItem
           title="How are paid plans billed?"
