@@ -562,3 +562,123 @@ body {
   gap: 16;
   border-radius: 24px 24px 24px 0px;
 }
+
+/* Plans */
+.card1-plans {
+  max-width: 370px;
+  width: 100%;
+  padding-block: 20px;
+  height: min-content; /* 471px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 2.89483612233903px 2.89483612233903px 0px rgba(0, 0, 0, 0),
+    0px 6.892677056377244px 6.892677056377244px 0px rgba(0, 0, 0, 0.00996),
+    0px 12.55862685727885px 12.55862685727885px 0px rgba(0, 0, 0, 0.01815),
+    0px 20.87830690109316px 20.87830690109316px 0px rgba(0, 0, 0, 0.03017),
+    0px 33.73585244383122px 33.73585244383122px 0px rgba(0, 0, 0, 0.04875),
+    0px 55.18945350909803px 55.18945350909803px 0px rgba(0, 0, 0, 0.07975),
+    0px 95.0814091774674px 95.0814091774674px 0px rgba(0, 0, 0, 0.1374),
+    0px 173px 173px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.6);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.card2-plans {
+  max-width: 370px;
+  width: 100%;
+  height: min-content; /* 567px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px 68px 0px;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 1.6733156776526186px 1.6733156776526186px 0px rgba(0, 0, 0, 0),
+    0px 3.984206390969505px 3.984206390969505px 0px rgba(0, 0, 0, 0.00996),
+    0px 7.259321882820145px 7.259321882820145px 0px rgba(0, 0, 0, 0.01815),
+    0px 12.068385491961365px 12.068385491961365px 0px rgba(0, 0, 0, 0.03017),
+    0px 19.50049274209897px 19.50049274209897px 0px rgba(0, 0, 0, 0.04875),
+    0px 31.901418213351462px 31.901418213351462px 0px rgba(0, 0, 0, 0.07975),
+    0px 54.96035212570371px 54.96035212570371px 0px rgba(0, 0, 0, 0.1374),
+    0px 100px 100px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card3-plans {
+  max-width: 370px;
+  width: 100%;
+  padding-block: 20px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 1.6733156776526186px 1.6733156776526186px 0px rgba(0, 0, 0, 0),
+    0px 3.984206390969505px 3.984206390969505px 0px rgba(0, 0, 0, 0.00996),
+    0px 7.259321882820145px 7.259321882820145px 0px rgba(0, 0, 0, 0.01815),
+    0px 12.068385491961365px 12.068385491961365px 0px rgba(0, 0, 0, 0.03017),
+    0px 19.50049274209897px 19.50049274209897px 0px rgba(0, 0, 0, 0.04875),
+    0px 31.901418213351462px 31.901418213351462px 0px rgba(0, 0, 0, 0.07975),
+    0px 54.96035212570371px 54.96035212570371px 0px rgba(0, 0, 0, 0.1374),
+    0px 100px 100px 0px rgba(0, 0, 0, 0.25);
+  background-color: #000000;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 25px;
+}
+.blur-capsule-plans {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 153px */
+  height: min-content; /* 29px */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px 4px 8px;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 20px;
+}
+.button-plans {
+  flex-shrink: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  max-width: 220px;
+  overflow: visible;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 24px 24px 24px 0px;
+}

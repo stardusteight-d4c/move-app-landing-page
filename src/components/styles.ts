@@ -84,7 +84,7 @@ export const whyUseStyles = {
     targetIcon: `w-[60px] h-[60px] text-[#30ADFF] mx-auto`,
     heading2: `font-extrabold text-4xl md:text-[50px] !leading-[1.2]`,
     paragraph: `text-lg !leading-[1.2]`,
-    donwloadBtn: `download-button-why-use text-black font-semibold uppercase gap-x-4`,
+    donwloadBtn: `download-button-why-use text-black font-semibold uppercase gap-x-4 active:scale-100 transition-all duration-300 hover:scale-105`,
     divider: `h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto`,
     darkCard: `shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]`,
     heading4: `font-bold`,
@@ -135,6 +135,48 @@ export const getTheAppStyles = {
     medalIcon: `text-[#FF7697] w-[60px] h-[60px]`,
     heading2: `text-4xl md:text-[50px] font-extrabold !leading-[1.2]`,
     text: `text-lg`,
-    gradientBtn: `button-gradient-get-the-app flex items-center gap-x-4 text-black font-semibold`,
+    gradientBtn: `button-gradient-get-the-app flex items-center gap-x-4 text-black font-semibold active:scale-100 transition-all duration-300 hover:scale-105`,
   },
+}
+
+export const plansStyles = {
+  wrapper: `bg-wallpaper-4 px-4 mt-[100px] pb-[100px] bg-cover`,
+  headingContainer: `max-w-[500px] mx-auto gap-y-[30px] flex flex-col items-center justify-center`,
+  heading2: `font-extrabold text-4xl md:text-[50px]`,
+  headingSpan: `text-[22px] font-bold text-center`,
+  divider: `h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]`,
+  cardsContainer: `flex items-center flex-col md:flex-row justify-center gap-y-[30px] gap-x-[30px]`,
+  handleWrapperCard: (cardCSS: string) => {
+    return `${cardCSS} card-animate-plan`
+  },
+  price: `font-extrabold text-4xl mmd:text-[50px] mb-[10px]`,
+  handleUnorderedList: (text?: string) => {
+    return `${text} space-y-[10px]`
+  },
+  handleDivider: (color: string) => {
+    return ` h-0 w-full border-t border-t-[${color}]/10`
+  },
+  listItem: `flex items-center gap-x-[10px] font-inter`,
+  card1: {
+    container: `text-black flex flex-col items-center gap-y-[10px]`,
+    heading3: `font-semibold uppercase gap-y-[10px] flex flex-col items-center`,
+    span: `blur-capsule-plans bg-black/10 border border-black/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]`,
+    btn: `button-plans active:scale-100 transition-all duration-300 hover:scale-105 gap-x-4 font-semibold uppercase bg-black text-white`,
+  },
+  card2: {
+    container: `text-white flex flex-col items-center gap-y-[10px]`,
+    blurCapsule: `blur-capsule-plans bg-white/10 border border-white/10 gap-x-[10px] font-semibold uppercase`,
+    heading3: `font-semibold uppercase gap-y-[10px] flex flex-col items-center`,
+    span: `blur-capsule-plans bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]`,
+    btn: `button-plans active:scale-100 transition-all duration-300 hover:scale-105 gap-x-4 font-semibold uppercase bg-white text-black`,
+  },
+  card3: {
+    container: `text-white flex flex-col items-center gap-y-[10px]`,
+    heading3: `font-semibold text-white/70 uppercase gap-y-[10px] flex flex-col items-center`,
+    blurCapsule: `blur-capsule-plans bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]`,
+    btn: `button-plans active:scale-100 transition-all duration-300 hover:scale-105 gap-x-4 font-semibold uppercase bg-white text-black`,
+  },
+  faqWrapper: `flex flex-col items-center justify-center`,
+  headingFaq: `font-extrabold text-4xl md:text-[50px] mb-[30px] relative z-50`,
+  faqItemsContainer: `flex flex-col items-center justify-center gap-y-[30px] w-full`,
 }

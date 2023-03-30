@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import FaqItem from './integrate/FaqItem.vue'
 import {
   Stack,
@@ -12,152 +13,158 @@ import {
   CreditCard,
   Medal,
 } from './atoms/icons'
+import anime from 'animejs'
+import { plansStyles as css } from './styles'
+
+const sectionEl = ref()
+const cardsContainerEl = ref()
+const boxes = [sectionEl, cardsContainerEl]
+
+onMounted(() => {
+  handleObserver()
+})
+
+function handleObserver() {
+  boxes.forEach((box) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === 'plans') {
+            anime({
+              targets: `#${entry.target.id}`,
+              opacity: [0, 1],
+              translateY: [200, 0],
+              duration: 5000,
+            })
+          } else if (entry.target.id === 'cards-container-plans') {
+            const items = document.querySelectorAll('.card-animate-plan')
+            anime({
+              targets: items,
+              translateY: [50, 0],
+              duration: 2000,
+              easing: 'easeOutSine',
+              delay: anime.stagger(100, { start: 0 }),
+            })
+          }
+        }
+      })
+    })
+    observer.observe(box.value)
+    return () => observer.disconnect()
+  })
+}
 </script>
 
 <template>
-  <section class="bg-wallpaper-4 px-4 mt-[100px] pb-[100px] bg-cover">
-    <div
-      class="max-w-[500px] mx-auto gap-y-[30px] flex flex-col items-center justify-center"
-    >
-      <h2 class="font-extrabold text-4xl md:text-[50px]">Ready to start?</h2>
-      <span class="text-[22px] font-bold text-center"
+  <section id="plans" ref="sectionEl" :class="css.wrapper">
+    <div :class="css.headingContainer">
+      <h2 :class="css.heading2">Ready to start?</h2>
+      <span :class="css.headingSpan"
         >Launch a site for free. Choose a site plan to unlock more
         features.</span
       >
     </div>
-    <div class="h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
+    <div :class="css.divider" />
     <div
-      class="flex items-center flex-col md:flex-row justify-center gap-y-[30px] gap-x-[30px]"
+      ref="cardsContainerEl"
+      id="cards-container-plans"
+      :class="css.cardsContainer"
     >
-      <div class="card1">
-        <div class="text-black flex flex-col items-center gap-y-[10px]">
-          <h3
-            class="font-semibold uppercase gap-y-[10px] flex flex-col items-center"
-          >
-            <Pen />Free plan
-          </h3>
-          <h4 class="font-extrabold text-4xl mmd:text-[50px] mb-[10px]">
-            $15/mo
-          </h4>
-          <span
-            class="blur-capsule bg-black/10 border border-black/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
+      <div :class="css.handleWrapperCard('card1-plans')">
+        <div :class="css.card1.container">
+          <h3 :class="css.card1.heading3"><Pen />Free plan</h3>
+          <h4 :class="css.price">$15/mo</h4>
+          <span :class="css.card1.span"
             >Up to 3 projects <Info width="16" height="16"
           /></span>
-          <ul class="space-y-[10px]">
-            <li class="flex items-center gap-x-[10px] font-inter">
+          <ul :class="css.handleUnorderedList()">
+            <li :class="css.listItem">
               <Globe width="24" height="24" /> Custom domain
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Lock width="24" height="24" /> Password protect
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Books width="24" height="24" /> 10GB bandwidth
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Stack width="24" height="24" /> 1,000 CMS items
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Person width="24" height="24" /> 10,000 visitors
             </li>
           </ul>
-          <div class="h-0 w-full border-t border-t-[#000000]/10" />
-          <button
-            class="button gap-x-4 font-semibold uppercase bg-black text-white"
-          >
+          <div :class="css.handleDivider('#000000')" />
+          <button :class="css.card1.btn">
             <Pen width="30" height="30" />Try for free
           </button>
         </div>
       </div>
-      <div class="card2">
-        <div class="text-white flex flex-col items-center gap-y-[10px]">
-          <span
-            class="blur-capsule bg-white/10 border border-white/10 gap-x-[10px] font-semibold uppercase"
+      <div :class="css.handleWrapperCard('card2-plans')">
+        <div :class="css.card2.container">
+          <span :class="css.card2.blurCapsule"
             ><Medal width="16" height="16" /> Popular</span
           >
-          <div class="h-0 w-full border-t border-t-[#FFFFFF]/10" />
-          <h3
-            class="font-semibold uppercase gap-y-[10px] flex flex-col items-center"
-          >
-            <Pen />starter plan
-          </h3>
-          <h4 class="font-extrabold text-4xl mmd:text-[50px] mb-[10px]">
-            $30/mo
-          </h4>
-          <span
-            class="blur-capsule bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
+          <div :class="css.handleDivider('#FFFFFF')" />
+          <h3 :class="css.card2.heading3"><Pen />starter plan</h3>
+          <h4 :class="css.price">$30/mo</h4>
+          <span :class="css.card2.span"
             >Billed yearly <ToggleLeft width="16" height="16"
           /></span>
-          <ul class="space-y-[10px]">
-            <li class="flex items-center gap-x-[10px] font-inter">
+          <ul :class="css.handleUnorderedList()">
+            <li :class="css.listItem">
               <Globe width="24" height="24" /> Custom domain
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Lock width="24" height="24" /> Password protect
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Books width="24" height="24" /> 10GB bandwidth
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Stack width="24" height="24" /> 1,000 CMS items
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Person width="24" height="24" /> 10,000 visitors
             </li>
           </ul>
-          <div class="h-0 w-full border-t border-t-[#FFFFFF]/10" />
-          <button
-            class="button gap-x-4 font-semibold uppercase bg-white text-black"
-          >
-            <CreditCard />subscribe
-          </button>
+          <div :class="css.handleDivider('#FFFFFF')" />
+          <button :class="css.card2.btn"><CreditCard />subscribe</button>
         </div>
       </div>
-      <div class="card3">
-        <div class="text-white flex flex-col items-center gap-y-[10px]">
-          <h3
-            class="font-semibold text-white/70 uppercase gap-y-[10px] flex flex-col items-center"
-          >
-            <Pen color="#FFFFFF" />pro plan
-          </h3>
-          <h4 class="font-extrabold text-4xl mmd:text-[50px] mb-[10px]">
-            $45/mo
-          </h4>
-          <span
-            class="blur-capsule bg-white/10 border border-white/10 font-medium text-sm flex items-center whitespace-nowrap gap-x-[10px]"
+      <div :class="css.handleWrapperCard('card3-plans')">
+        <div :class="css.card3.container">
+          <h3 :class="css.card3.heading3"><Pen color="#FFFFFF" />pro plan</h3>
+          <h4 :class="css.price">$45/mo</h4>
+          <span :class="css.card3.blurCapsule"
             >Billed yearly <ToggleLeft width="16" height="16"
           /></span>
-          <ul class="space-y-[10px] text-white/70">
-            <li class="flex items-center gap-x-[10px] font-inter">
+          <ul :class="css.handleUnorderedList('text-white/70')">
+            <li :class="css.listItem">
               <Globe width="24" height="24" color="#FFFFFF" /> Custom domain
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Lock width="24" height="24" color="#FFFFFF" /> Password protect
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Books width="24" height="24" color="#FFFFFF" /> 10GB bandwidth
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Stack width="24" height="24" color="#FFFFFF" /> 1,000 CMS items
             </li>
-            <li class="flex items-center gap-x-[10px] font-inter">
+            <li :class="css.listItem">
               <Person width="24" height="24" color="#FFFFFF" /> 10,000 visitors
             </li>
           </ul>
-          <div class="h-0 w-full border-t border-t-[#FFFFFF]/10" />
-          <button
-            class="button gap-x-4 font-semibold uppercase bg-white text-black"
-          >
-            <CreditCard />subscribe
-          </button>
+          <div :class="css.handleDivider('#FFFFFF')" />
+          <button :class="css.card3.btn"><CreditCard />subscribe</button>
         </div>
       </div>
     </div>
-    <div class="h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
-    <div class="flex flex-col items-center justify-center">
-      <h2 class="font-extrabold text-4xl md:text-[50px] mb-[30px] relative z-50">FAQ</h2>
-      <div
-        class="flex flex-col items-center justify-center gap-y-[30px] w-full"
-      >
+    <div :class="css.divider" />
+    <div :class="css.faqWrapper">
+      <h2 :class="css.headingFaq">FAQ</h2>
+      <div :class="css.faqItemsContainer">
         <FaqItem
           title="How are paid plans billed?"
           info="Paid plans are billed both at a Site and Team level. Both subscriptions
@@ -180,128 +187,3 @@ import {
     </div>
   </section>
 </template>
-
-<style scoped>
-.card1 {
-  max-width: 370px;
-  width: 100%;
-  padding-block: 20px;
-  height: min-content; /* 471px */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
-  box-shadow: 0px 2.89483612233903px 2.89483612233903px 0px rgba(0, 0, 0, 0),
-    0px 6.892677056377244px 6.892677056377244px 0px rgba(0, 0, 0, 0.00996),
-    0px 12.55862685727885px 12.55862685727885px 0px rgba(0, 0, 0, 0.01815),
-    0px 20.87830690109316px 20.87830690109316px 0px rgba(0, 0, 0, 0.03017),
-    0px 33.73585244383122px 33.73585244383122px 0px rgba(0, 0, 0, 0.04875),
-    0px 55.18945350909803px 55.18945350909803px 0px rgba(0, 0, 0, 0.07975),
-    0px 95.0814091774674px 95.0814091774674px 0px rgba(0, 0, 0, 0.1374),
-    0px 173px 173px 0px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.6);
-  overflow: visible;
-  position: relative;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 10;
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.card2 {
-  max-width: 370px;
-  width: 100%;
-  height: min-content; /* 567px */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px 0px 68px 0px;
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
-  box-shadow: 0px 1.6733156776526186px 1.6733156776526186px 0px rgba(0, 0, 0, 0),
-    0px 3.984206390969505px 3.984206390969505px 0px rgba(0, 0, 0, 0.00996),
-    0px 7.259321882820145px 7.259321882820145px 0px rgba(0, 0, 0, 0.01815),
-    0px 12.068385491961365px 12.068385491961365px 0px rgba(0, 0, 0, 0.03017),
-    0px 19.50049274209897px 19.50049274209897px 0px rgba(0, 0, 0, 0.04875),
-    0px 31.901418213351462px 31.901418213351462px 0px rgba(0, 0, 0, 0.07975),
-    0px 54.96035212570371px 54.96035212570371px 0px rgba(0, 0, 0, 0.1374),
-    0px 100px 100px 0px rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.4);
-  overflow: visible;
-  position: relative;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 10;
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.card3 {
-  max-width: 370px;
-  width: 100%;
-  padding-block: 20px;
-  height: min-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
-  box-shadow: 0px 1.6733156776526186px 1.6733156776526186px 0px rgba(0, 0, 0, 0),
-    0px 3.984206390969505px 3.984206390969505px 0px rgba(0, 0, 0, 0.00996),
-    0px 7.259321882820145px 7.259321882820145px 0px rgba(0, 0, 0, 0.01815),
-    0px 12.068385491961365px 12.068385491961365px 0px rgba(0, 0, 0, 0.03017),
-    0px 19.50049274209897px 19.50049274209897px 0px rgba(0, 0, 0, 0.04875),
-    0px 31.901418213351462px 31.901418213351462px 0px rgba(0, 0, 0, 0.07975),
-    0px 54.96035212570371px 54.96035212570371px 0px rgba(0, 0, 0, 0.1374),
-    0px 100px 100px 0px rgba(0, 0, 0, 0.25);
-  background-color: #000000;
-  overflow: visible;
-  position: relative;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 10;
-  border-radius: 25px;
-}
-
-.blur-capsule {
-  box-sizing: border-box;
-  flex-shrink: 0;
-  width: min-content; /* 153px */
-  height: min-content; /* 29px */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 16px 4px 8px;
-  overflow: visible;
-  position: relative;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 10;
-  border-radius: 20px;
-}
-
-.button {
-  flex-shrink: 0;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  max-width: 220px;
-  overflow: visible;
-  position: relative;
-  padding: 0px 0px 0px 0px;
-  align-content: center;
-  flex-wrap: wrap;
-  border-radius: 24px 24px 24px 0px;
-}
-</style>
