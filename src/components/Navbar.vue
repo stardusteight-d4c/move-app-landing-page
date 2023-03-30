@@ -1,69 +1,79 @@
 <script setup lang="ts">
-import { Hourglass, Stack, SealCheck, Files } from './atoms/icons'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { Stack, SealCheck, Files } from './atoms/icons'
+import { Logo } from './integrate'
+import anime from 'animejs'
+import { navbarStyles as css } from './styles'
+
+const isBlurOn = ref(false)
+
+onMounted(() => {
+  window.addEventListener('scroll', handleShowBlurOnScroll)
+  executeAnimation()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleShowBlurOnScroll)
+})
+
+function handleShowBlurOnScroll() {
+  if (window.scrollY >= 100) {
+    isBlurOn.value = true
+  } else if (window.scrollY === 0) {
+    isBlurOn.value = false
+    executeAnimation()
+  } else {
+    isBlurOn.value = false
+  }
+}
+
+function executeAnimation() {
+  anime({
+    targets: '#nav',
+    translateY: [-50, 0],
+    duration: 3000,
+    easing: 'easeOutExpo',
+  })
+  anime({
+    targets: '.nav-item1',
+    translateY: [-50, 0],
+    duration: 3000,
+    delay: 200,
+  })
+  anime({
+    targets: '.nav-item2',
+    translateY: [-50, 0],
+    duration: 3000,
+    delay: 300,
+  })
+  anime({
+    targets: '.nav-item3',
+    translateY: [-50, 0],
+    duration: 3000,
+    delay: 300,
+  })
+}
 </script>
 
 <template>
-  <nav
-    class="max-w-7xl mx-4 md:mx-10 absolute inset-x-0 top-0 pt-4 md:pt-7 2xl:pt-[48px] pb-8 xl:mx-auto flex items-center justify-between"
-  >
-    <div class="logo">
-      <Hourglass width="32" height="32" />
+  <nav id="nav" :class="css.handleWrapper(isBlurOn)">
+    <div :class="css.container">
+      <Logo />
+      <div :class="css.centerContent">
+        <div :class="css.handleItem('nav-item1')">
+          <Stack width="30" height="30" />
+          <span :class="css.itemTxt">Features</span>
+        </div>
+        <div :class="css.handleItem('nav-item2')">
+          <SealCheck width="30" height="30" />
+          <span :class="css.itemTxt">Community</span>
+        </div>
+        <div :class="css.handleItem('nav-item3')">
+          <Files width="30" height="30" />
+          <span :class="css.itemTxt">Docs</span>
+        </div>
+      </div>
+      <button :class="css.signInBtn">Sign In</button>
     </div>
-    <div class="hidden md:flex items-center gap-x-20">
-      <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <Stack color="#FFFFFF" width="30" height="30" />
-        <span class="uppercase font-bold !leading-[1.2]">Features</span>
-      </div>
-      <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <SealCheck width="30" height="30" />
-        <span class="uppercase font-bold !leading-[1.2]">Community</span>
-      </div>
-      <div class="flex items-center gap-x-[10px] cursor-pointer">
-        <Files width="30" height="30" />
-        <span class="uppercase font-bold !leading-[1.2]">Docs</span>
-      </div>
-    </div>
-    <button
-      class="button-default text-sm md:text-base whitespace-nowrap uppercase font-bold hover:text-[#121316] hover:bg-white hover:scale-105 active:scale-100 transition-all duration-300 ease-in"
-    >
-      Sign In
-    </button>
   </nav>
 </template>
-
-<style scoped>
-.logo {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ff75a1 0%, #1a40ff 100%);
-  overflow: visible;
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.button-default {
-  box-sizing: border-box;
-  flex-shrink: 0;
-  width: min-content; /* 88px */
-  height: 44px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px 8px 16px;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  overflow: visible;
-  position: relative;
-  align-content: center;
-  flex-wrap: wrap;
-  gap: 16;
-  border-radius: 24px 24px 24px 0px;
-  border: 1px solid #ffffff;
-}
-</style>

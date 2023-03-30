@@ -25,52 +25,52 @@ import {
         <div class="flex mx-auto w-fit flex-col sm:flex-row sm:w-auto items-start gap-y-[17px] sm:gap-y-0 sm:items-center justify-center gap-x-[56px] mt-[30px] llg:mb-0">
           <ul class="flex flex-col gap-y-[17px]">
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Stack width="30" height="30" />Features
             </li>
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <SealCheck width="30" height="30" />Community
             </li>
 
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Files width="30" height="30" />Docs
             </li>
           </ul>
           <ul class="flex flex-col gap-y-[17px]">
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Envelope width="30" height="30" />Contact
             </li>
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Info width="30" height="30" />About us
             </li>
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <List width="30" height="30" />We hire
             </li>
           </ul>
           <ul class="flex flex-col gap-y-[17px]">
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Discord width="30" height="30" />Discord
             </li>
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Youtube width="30" height="30" />Youtube
             </li>
             <li
-              class="flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer hover:underline"
+              class="effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer"
             >
               <Instagram width="30" height="30" />Instagram
             </li>
@@ -101,8 +101,8 @@ import {
           >Copyright © 2022 - {{ new Date().getFullYear() }} DesignCode &
           Stardusteight</span
         >
-        <a href="#" class="uppercase font-medium">Terms</a>
-        <a href="#" class="uppercase font-medium">Privacy Policy</a>
+        <a href="#" class="effect-underline relative uppercase font-medium">Terms</a>
+        <a href="#" class="effect-underline relative uppercase font-medium">Privacy Policy</a>
       </div>
     </div>
   </footer>

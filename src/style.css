@@ -2,23 +2,165 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Globals */
 html,
 body {
   @apply min-h-screen max-w-[100vw] overflow-x-hidden bg-[#121316] text-white font-manrope antialiased scroll-smooth;
 }
-
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
   background: transparent;
 }
-
 ::-moz-scrollbar {
   background-color: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
   background: linear-gradient(115deg, #ffb3b3 0%, hsl(240, 100%, 65%) 100%);
   border-radius: 20px;
+}
+/* Underline Effect */
+.effect-underline:after {
+	content: '';
+  position: absolute;
+  display: inline-block;
+  height: 1em;
+  width: 102%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  bottom: -2px;
+  left: 1px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Navbar */
+.logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff75a1 0%, #1a40ff 100%);
+  overflow: visible;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.blur-effect-nav {
+  background: rgba(255, 255, 255, 0.001);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+.button-default-nav {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 88px */
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 16px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 16;
+  border-radius: 24px 24px 24px 0px;
+  border: 1px solid #ffffff;
+}
+
+/* Hero */
+@keyframes bounce-right {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+}
+.arrow-right-animation {
+  animation: bounce-right 1.5s infinite;
+}
+.updated-span-hero {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-content: center;
+  gap: 10;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 768px) {
+  .updated-span-hero {
+    padding: 2px 10px 2px 8px;
+  }
+}
+.button-gradient-hero {
+  flex-shrink: 0;
+  width: 220px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background: linear-gradient(115deg, #ffb3b3 0%, hsl(240, 100%, 65%) 100%);
+  overflow: visible;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 16;
+  border-radius: 24px 24px 24px 0px;
+}
+.button-blur-hero {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 220px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 16;
+  border-radius: 24px 24px 24px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

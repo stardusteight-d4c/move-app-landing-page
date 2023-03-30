@@ -154,7 +154,7 @@ import {
     </div>
     <div class="h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
     <div class="flex flex-col items-center justify-center">
-      <h2 class="font-extrabold text-4xl md:text-[50px] mb-[30px]">FAQ</h2>
+      <h2 class="font-extrabold text-4xl md:text-[50px] mb-[30px] relative z-50">FAQ</h2>
       <div
         class="flex flex-col items-center justify-center gap-y-[30px] w-full"
       >
@@ -182,11 +182,6 @@ import {
 </template>
 
 <style scoped>
-.bottom-inset-shadow {
-  -webkit-box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
-  -moz-box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
-  box-shadow: inset 0px -7px 6px 0px rgba(0, 0, 0, 0.88);
-}
 .card1 {
   max-width: 370px;
   width: 100%;
