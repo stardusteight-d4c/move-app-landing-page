@@ -6,7 +6,7 @@
    Move App, Landing Page
 </h1>
 
-Design of a health application landing page, where the design was taken from a free template from the Framer platform, it is a modern and attractive website, built with the latest web technologies. The page is focused on encouraging people to monitor their physical activities, improve their quality of life and convince visitors to install the app.
+Development of a health application landing page, where the design was taken from a free template from the Framer platform, it is a modern and attractive website, built with the latest web technologies. The page is focused on encouraging people to monitor their physical activities, improve their quality of life and convince visitors to install the app.
 
 The page is developed with TypeScript, Vue.js and Vite, ensuring a clean and organized code. The UI is designed using the CSS framework, TailwindCSS, to create a modern, consistent and responsive design across all platforms.
 
