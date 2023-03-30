@@ -277,3 +277,139 @@ body {
   gap: 16;
   border-radius: 24px 24px 24px 0px;
 }
+
+/* WhyUse */
+
+.download-button-why-use {
+  flex-shrink: 0;
+  width: 220px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background: linear-gradient(115deg, #8af2ff 0%, #1fa5ff 100%);
+  overflow: visible;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 16;
+  border-radius: 24px 24px 24px 0px;
+}
+.card-workout-why-use {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 360px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px 30px 30px;
+  background-color: #44ccff;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  border-radius: 30px;
+}
+.card-glassmorphism-why-use {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 360px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px 30px 30px;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 30px;
+}
+.span-glassmorphism-why-use {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 77px */
+  height: min-content; /* 35px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 16px;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.white-card-why-use {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  color: black;
+  width: 360px;
+  height: min-content; /* 428px */
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 10px 10px 10px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 1.003989406591571px 1.003989406591571px -0.46875px rgba(0, 0, 0, 0.19),
+    0px 2.3905238345817033px 2.3905238345817033px -0.9375px rgba(0, 0, 0, 0.18252),
+    0px 4.355593129692087px 4.355593129692087px -1.40625px rgba(0, 0, 0, 0.17843),
+    0px 7.2410312951768185px 7.2410312951768185px -1.875px rgba(0, 0, 0, 0.17241),
+    0px 11.700295645259382px 11.700295645259382px -2.34375px rgba(0, 0, 0, 0.16312),
+    0px 19.140850928010877px 19.140850928010877px -2.8125px rgba(0, 0, 0, 0.14762),
+    0px 32.97621127542222px 32.97621127542222px -3.28125px rgba(0, 0, 0, 0.1188),
+    0px 60px 60px -3.75px rgba(0, 0, 0, 0.0625);
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 0px 50px 50px 50px;
+}
+.image-container-why-use {
+  width: 100%;
+  height: 188px;
+  display: block;
+  position: relative;
+  background-image: url('/3d-room.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+}
+.round-user-why-use {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+}

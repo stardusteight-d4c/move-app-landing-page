@@ -52,17 +52,17 @@ export const jumpstartStyles = {
   container: `max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto`,
   firstSectionContainer: `hidden llg:flex flex-col items-center gap-y-[50px]`,
   handleDefaultCard: (backgroundImage: string) => {
-    return `${backgroundImage} card-animate card-default-jumpstart shadow-drop`
+    return `${backgroundImage} card-animate-jumpstart card-default-jumpstart shadow-drop`
   },
   defaultCardContent: `card-info-jumpstart mt-[100%]`,
   secondSectionContainer: `flex flex-col items-center gap-y-[50px]`,
   cardSmallJumpstart: {
-    wrapper: `card-animate card-small-jumpstart shadow-drop`,
+    wrapper: `card-animate-jumpstart card-small-jumpstart shadow-drop`,
     heading2: `flex items-center font-bold text-[22px] gap-x-[10px] mb-[20px]`,
     paragraph: `font-medium text-sm w-[260px] mb-[20px]`,
     cardInfo: `card-info-jumpstart items-center`,
   },
-  cardInfo: `card-animate card-info-jumpstart shadow-drop max-w-[300px] items-center`,
+  cardInfo: `card-animate-jumpstart card-info-jumpstart shadow-drop max-w-[300px] items-center`,
   thirdSection: {
     wrapper: `max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]`,
     rocketIcon: `w-[60px] h-[60px] mx-auto text-[#BB66CC]`,
@@ -73,5 +73,41 @@ export const jumpstartStyles = {
     darkCard: `shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]`,
     heading4: `font-bold`,
     text: `text-center text-sm font-medium text-white/70`,
+  },
+}
+
+export const whyUseStyles = {
+  wrapper: `bg-wallpaper-2 relative z-10 bg-cover py-[100px] w-screen`,
+  container: `max-w-7xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center gap-x-[50px] llg:gap-x-[18px] xl:gap-x-[50px]`,
+  firstSection: {
+    container: `card-animate-why-use w-full max-w-[400px] flex flex-col items-center gap-y-[31px] text-center`,
+    targetIcon: `w-[60px] h-[60px] text-[#30ADFF] mx-auto`,
+    heading2: `font-extrabold text-4xl md:text-[50px] !leading-[1.2]`,
+    paragraph: `text-lg !leading-[1.2]`,
+    donwloadBtn: `download-button-why-use text-black font-semibold uppercase gap-x-4`,
+    divider: `h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto`,
+    darkCard: `shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]`,
+    heading4: `font-bold`,
+    text: `text-center text-sm font-medium text-white/70`,
+  },
+  secondSection: {
+    container: `flex flex-col items-center gap-y-[50px]`,
+    cardWorkout: `card-animate-why-use card-workout-why-use`,
+    heading: `text-[22px] font-bold`,
+    spanWorkout: `font-medium tracking-wider text-lg`,
+    paragraphWorkout: `text-[22px] font-bold`,
+    blurCard: `card-glassmorphism-why-use`,
+    spansContainer: `flex items-center gap-x-[10px]`,
+    span: `span-glassmorphism-why-use cursor-default uppercase font-semibold`,
+    text: `font-medium`,
+  },
+  thirdSection: {
+    container: `card-animate-why-use white-card-why-use hidden llg:flex`,
+    heading3: `text-[22px] font-bold flex items-center gap-x-[10px]`,
+    span: `font-semibold`,
+    paragraph: `font-medium mx-[20px]`,
+    imageContainer: `image-container-why-use`,
+    womanAvatar: `round-user-why-use bg-woman bottom-2 left-3 z-10`,
+    menAvatar: `round-user-why-use bg-men bottom-2 left-12 z-0`,
   },
 }

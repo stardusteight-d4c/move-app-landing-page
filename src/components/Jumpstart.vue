@@ -25,8 +25,8 @@ function handleObserver() {
               translateY: [200, 0],
               duration: 5000,
             })
-          } else if (entry.target.id === 'cardsContainer') {
-            const items = document.querySelectorAll('.card-animate')
+          } else if (entry.target.id === 'cardsContainerJumpstart') {
+            const items = document.querySelectorAll('.card-animate-jumpstart')
             anime({
               targets: items,
               opacity: [0, 1],
@@ -46,7 +46,7 @@ function handleObserver() {
 
 <template>
   <section id="jumpstart" ref="sectionEl" :class="css.wrapper">
-    <div ref="cardsContainerEl" id="cardsContainer" :class="css.container">
+    <div ref="cardsContainerEl" id="cardsContainerJumpstart" :class="css.container">
       <!-- First Section -->
       <div :class="css.firstSectionContainer">
         <div :class="css.handleDefaultCard('bg-wallpaper-1')">
