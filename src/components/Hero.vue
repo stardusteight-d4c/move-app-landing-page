@@ -26,44 +26,31 @@ function executeAnimation() {
 </script>
 
 <template>
-  <section class="w-screen min-h-screen py-28 2xl:py-0 h-screen relative">
-    <div
-      id="background"
-      class="bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop inset-0 absolute bg-100% xl:bg-cover w-screen min-h-screen py-28 2xl:py-0 h-screen"
-    />
+  <section :class="css.wrapper">
+    <div id="background" :class="css.background" />
     <Navbar />
-    <div
-      id="text"
-      class="max-w-7xl mx-4 md:mx-10 md:mt-8 xl:mx-auto my-auto h-full flex flex-col justify-around"
-    >
-      <div class="max-w-[500px] md:w-[500px] h-fit">
-        <span
-          class="updated-span-hero text-sm md:text-base cursor-pointer gax-x-[4px] md:gap-x-[8px] whitespace-nowrap mb-4 2xl:mb-[30px]"
-          >Updated for iOS 16
-          <ArrowRight width="16" height="16" class="arrow-right-animation"
+    <div id="text" :class="css.container">
+      <div :class="css.contentContainer">
+        <span :class="css.updatedSpan"
+          >Updated for iOS 16 <ArrowRight :class="css.arrowRightAnimation"
         /></span>
-        <h1
-          class="font-extrabold text-4xl sm:text-5xl md:text-6xl !leading-[1.2] mb-4 2xl:mb-[30px]"
-        >
+        <h1 :class="css.headingOne">
           Meet Move <br />
           The best app <br />
           for active people
         </h1>
-        <p class="text-lg !leading-[1.2] mb-[30px]">
+        <p :class="css.paragraph">
           Blood Oxygen app measurements are not intended for medical use,
           including self-diagnosis or consultation with a doctor, and are only
           designed for general fitness and wellness purposes.
         </p>
-        <div class="flex flex-col md:flex-row md:items-center gap-5">
-          <button
-            class="button-gradient-hero active:scale-100 transition-all duration-300 hover:scale-105 text-black font-semibold"
-          >
-            <AppWindow class="mr-4" /> Get the App
+        <div :class="css.buttonsContainer">
+          <button :class="css.buttonGradient">
+            <AppWindow :class="css.handleButtonIcon('text-[#000000]')" /> Get
+            the App
           </button>
-          <button
-            class="button-blur-hero active:scale-100 transition-all duration-300 hover:scale-105 text-white font-semibold"
-          >
-            <Play class="mr-4 text-[#FF88AA]" /> Watch video
+          <button :class="css.buttonBlur">
+            <Play :class="css.handleButtonIcon('text-[#FF88AA]')" /> Watch video
           </button>
         </div>
       </div>

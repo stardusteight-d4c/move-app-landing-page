@@ -15,5 +15,18 @@ export const navbarStyles = {
 }
 
 export const heroStyles = {
-  wrapper: `bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop relative bg-100% xl:bg-cover w-screen min-h-screen py-28 2xl:py-0 2xl:h-screen overflow-hidden`,
+  wrapper: `w-screen min-h-screen py-28 2xl:py-0 h-screen relative`,
+  background: `bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop inset-0 absolute bg-100% xl:bg-cover w-screen min-h-screen py-28 2xl:py-0 h-screen`,
+  container: `max-w-7xl mx-4 md:mx-10 md:mt-8 xl:mx-auto md:my-auto h-full flex flex-col md:justify-around`,
+  contentContainer: `max-w-[500px] md:w-[500px] h-fit`,
+  updatedSpan: `updated-span-hero text-sm md:text-base cursor-pointer gax-x-[4px] md:gap-x-[8px] whitespace-nowrap mb-4 2xl:mb-[30px]`,
+  arrowRightAnimation: `arrow-right-animation w-[16px] h-[16px]`,
+  headingOne: `font-extrabold text-4xl sm:text-5xl md:text-6xl !leading-[1.2] mb-4 2xl:mb-[30px]`,
+  paragraph: `text-lg !leading-[1.2] mb-[30px]`,
+  buttonsContainer: `flex flex-col md:flex-row md:items-center gap-5`,
+  buttonGradient: `button-gradient-hero active:scale-100 transition-all duration-300 hover:scale-105 text-black font-semibold`,
+  buttonBlur: `button-blur-hero active:scale-100 transition-all duration-300 hover:scale-105 text-white font-semibold`,
+  handleButtonIcon: (color: string = 'text-[#000000]') => {
+    return `${color} mr-4`
+  },
 }
