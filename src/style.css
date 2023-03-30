@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Globals */
 html,
 body {
@@ -24,7 +23,7 @@ body {
 }
 /* Underline Effect */
 .effect-underline:after {
-	content: '';
+  content: '';
   position: absolute;
   display: inline-block;
   height: 1em;
@@ -34,15 +33,27 @@ body {
   bottom: -2px;
   left: 1px;
   opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
 }
 .effect-underline:hover:after {
   opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Shadows */
+.top-inset-shadow {
+  -webkit-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+  box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
+}
+.shadow-drop {
+  -webkit-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
 }
 
 /* Navbar */
@@ -163,4 +174,15 @@ body {
   gap: 16;
   border-radius: 24px 24px 24px 0px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Companies */
+.logo-company {
+  background-color: #00000066;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

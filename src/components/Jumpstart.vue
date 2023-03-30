@@ -9,7 +9,7 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
     >
       <!-- First Section -->
       <div class="hidden llg:flex flex-col items-center gap-y-[50px]">
-        <div class="card bg-wallpaper-1">
+        <div class="card shadow-drop bg-wallpaper-1">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -28,7 +28,7 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
             </div>
           </div>
         </div>
-        <div class="card bg-wallpaper-2">
+        <div class="card shadow-drop bg-wallpaper-2">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -50,7 +50,7 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
       </div>
       <!-- Second Section -->
       <div class="flex flex-col items-center gap-y-[50px]">
-        <div class="card-small">
+        <div class="card-small shadow-drop">
           <h2
             class="flex items-center font-bold text-[22px] gap-x-[10px] mb-[20px]"
           >
@@ -78,7 +78,7 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
             </div>
           </div>
         </div>
-        <div class="card-info max-w-[300px] items-center">
+        <div class="card-info shadow-drop max-w-[300px] items-center">
           <div>
             <h3 class="font-bold text-[22px]">Lac Superieur</h3>
             <span class="text-[#FFFFFF]/40 block font-medium">30 mins ago</span>
@@ -93,7 +93,7 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
             >
           </div>
         </div>
-        <div class="card bg-wallpaper-3">
+        <div class="card shadow-drop bg-wallpaper-3">
           <div class="card-info mt-[100%]">
             <div>
               <h3 class="font-bold text-[22px]">Lac Superieur</h3>
@@ -196,7 +196,6 @@ import { PersonSimpleRun, Rocket, Cards, PlugsConnected } from './atoms/icons'
   padding: 20px 0px 0px 0px;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   position: relative;
   align-content: center;

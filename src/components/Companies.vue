@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref} from 'vue'
+import { onMounted, ref } from 'vue'
 import { Heart, HandHeart, BatteryFull } from './atoms/icons'
 import {
   framerLogo,
@@ -7,98 +7,117 @@ import {
   stripeLogo,
   instagramLogo,
   slackLogo,
-} from '../assets'
+} from '@/assets'
 import anime from 'animejs'
+import { companiesStyles as css } from './styles'
 
-const sectionTest = ref()
+const sectionEl = ref()
+const logoCompaniesContainer = ref()
+const headingTwo = ref()
+const count = ref(0)
+const formattedNum = ref(count.value.toLocaleString('pt-BR'))
+const boxes = [sectionEl, logoCompaniesContainer, headingTwo]
 
 onMounted(() => {
-  // Cria o observer de interseção
-  const observer = new IntersectionObserver((entries) => {
-    // Para cada entrada no observer
-    entries.forEach((entry) => {
-      // Se a entrada está visível na tela
-      if (entry.isIntersecting) {
-        // Executa a animação utilizando a função anime()
-        anime({
-          targets: sectionTest.value,
-          translateY: [100, 0],
-          duration: 4000,
-        })
-      }
-    })
-  })
-
-  // Adiciona o elemento a ser observado
-  observer.observe(sectionTest.value)
+  handleObserver()
 })
+
+function handleObserver() {
+  boxes.forEach((box) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === 'section') {
+            anime({
+              targets: `#${entry.target.id}`,
+              opacity: [0, 1],
+              translateY: [100, 0],
+              duration: 5000,
+            })
+          } else if (entry.target.id === 'logo-companies-container') {
+            anime({
+              targets: `#${entry.target.id}`,
+              translateY: [50, 0],
+              duration: 3000,
+            })
+          } else if (entry.target.id === 'heading-two') {
+            anime({
+              targets: count,
+              value: 8000,
+              round: 1,
+              easing: 'linear',
+              duration: 3000,
+              update: function () {
+                formattedNum.value = count.value.toLocaleString('pt-BR')
+              },
+            })
+          }
+        }
+      })
+    })
+    observer.observe(box.value)
+    return () => observer.disconnect()
+  })
+}
 </script>
 
 <template>
-  <section ref="sectionTest" class="top-inset-shadow bg-[#121316] relative py-[100px] w-screen">
-    <div
-      class="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center"
-    >
-      <div class="w-[350px] px-4 md:px-0 md:w-[500px] text-center">
-        <h2 class="font-bold text-2xl mb-[30px]">
-          Trusted by 8,000 companies worldwide
+  <section id="section" ref="sectionEl" :class="css.wrapper">
+    <div :class="css.container">
+      <div :class="css.headingContainer">
+        <h2 ref="headingTwo" id="heading-two" :class="css.heading2">
+          Trusted by +{{ formattedNum }} companies worldwide
         </h2>
-        <p class="font-medium !leading-6 mb-[30px]">
+        <p :class="css.headingParagraph">
           Replace your regular desk at work with a standing desk to reduce the
           amount of sedentary time in your day. Standing up means you’re likely
           to move around and burn more calories.
         </p>
       </div>
       <div
-        class="grid grid-cols-2 gap-8 md:flex items-center gap-x-[80px] mmd:gap-x-[120px]"
+        ref="logoCompaniesContainer"
+        id="logo-companies-container"
+        :class="css.logoCompaniesContainer"
       >
-        <div class="logo-company shadow-drop flex col-span-1">
+        <div :class="css.logoCompany">
           <img :src="framerLogo" width="32" height="32" alt="Framer" />
         </div>
-        <div class="logo-company shadow-drop flex col-span-1">
+        <div :class="css.logoCompany">
           <img :src="appleLogo" width="32" height="32" alt="Apple" />
         </div>
         <div class="logo-company shadow-drop hidden md:flex">
           <img :src="stripeLogo" width="32" height="32" alt="Stripe" />
         </div>
-        <div class="logo-company shadow-drop flex col-span-1">
+        <div :class="css.logoCompany">
           <img :src="instagramLogo" width="32" height="32" alt="Instagram" />
         </div>
-        <div class="logo-company shadow-drop flex col-span-1">
+        <div :class="css.logoCompany">
           <img :src="slackLogo" width="32" height="32" alt="Slack" />
         </div>
       </div>
-      <div class="h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20]" />
-      <h4 class="font-bold text-[22px] mb-[30px]">Designed to impress</h4>
-      <div
-        class="grid grid-cols-1 mdd:grid-cols-3 gap-y-8 mdd:gap-[10px] mx-4 mmd:mx-0 mmd:gap-x-[30px]"
-      >
-        <div
-          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
-        >
+      <div :class="css.divider" />
+      <h3 :class="css.heading3">Designed to impress</h3>
+      <div :class="css.cardsWrapper">
+        <div :class="css.cardContainer">
           <Heart />
-          <h4 class="font-bold">Quality of life</h4>
-          <p class="text-center text-sm font-medium text-white/70">
+          <h4 :class="css.heading4">Quality of life</h4>
+          <p :class="css.cardTxt">
             Control the health of your team. Offer rewards and have a more
             motivated team.
           </p>
         </div>
-        <div
-          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
-        >
+        <div :class="css.cardContainer">
           <HandHeart />
-          <h4 class="font-bold">More performance</h4>
-          <p class="text-center text-sm font-medium text-white/70">
+          <h4 :class="css.heading4">More performance</h4>
+          <p :class="css.cardTxt">
             A healthier team is a more active, creative and inspiring team for
             your business.
           </p>
         </div>
-        <div
-          class="shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]"
-        >
+        <div :class="css.cardContainer">
           <BatteryFull />
-          <h4 class="font-bold">Full energy</h4>
-          <p class="text-center text-sm font-medium text-white/70">
+          <h4 :class="css.heading4">Full energy</h4>
+          <p :class="css.cardTxt">
             Improve teamwork and deliver more results with a team full of
             energy.
           </p>
@@ -107,25 +126,3 @@ onMounted(() => {
     </div>
   </section>
 </template>
-
-<style scoped>
-.top-inset-shadow {
-  -webkit-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
-  -moz-box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
-  box-shadow: inset 0px 7px 6px 0px rgba(0, 0, 0, 0.88);
-}
-.shadow-drop {
-  -webkit-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
-  -moz-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
-  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.61);
-}
-.logo-company {
-  background-color: #00000066;
-  width: 64px;
-  height: 64px;
-  border-radius: 999px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-</style>

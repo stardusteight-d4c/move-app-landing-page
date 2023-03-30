@@ -30,3 +30,19 @@ export const heroStyles = {
     return `${color} mr-4`
   },
 }
+
+export const companiesStyles = {
+  wrapper: `top-inset-shadow bg-[#121316] relative py-[100px] w-screen`,
+  container: `max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center`,
+  headingContainer: `w-[350px] px-4 md:px-0 md:w-[500px] text-center`,
+  heading2: `font-bold text-2xl mb-[30px]`,
+  headingParagraph: `font-medium !leading-6 mb-[30px]`,
+  logoCompaniesContainer: `grid grid-cols-2 gap-8 md:flex items-center gap-x-[80px] mmd:gap-x-[120px]`,
+  logoCompany: `logo-company shadow-drop flex col-span-1`,
+  divider: `h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20]`,
+  heading3: `font-bold text-[22px] mb-[30px]`,
+  cardsWrapper: `grid grid-cols-1 mdd:grid-cols-3 gap-y-8 mdd:gap-[10px] mx-4 mmd:mx-0 mmd:gap-x-[30px]`,
+  cardContainer: `shadow-drop col-span-1 flex flex-col gap-y-[10px] w-[250px] items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]`,
+  heading4: `font-bold`,
+  cardTxt: `text-center text-sm font-medium text-white/70`,
+}
