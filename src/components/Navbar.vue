@@ -30,6 +30,7 @@ function handleShowBlurOnScroll() {
 function executeAnimation() {
   anime({
     targets: '#nav',
+    opacity: [0, 1],
     translateY: [-50, 0],
     duration: 3000,
     easing: 'easeOutExpo',

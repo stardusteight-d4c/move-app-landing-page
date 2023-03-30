@@ -12,12 +12,14 @@ onMounted(() => {
 function executeAnimation() {
   anime({
     targets: '#text',
-    translateX: [-100, 0],
+    opacity: [0, 1],
+    translateX: [-150, 0],
     duration: 3000,
     easing: 'easeOutExpo',
   })
   anime({
     targets: '#background',
+    opacity: [0, 1],
     translateX: [100, 0],
     duration: 3000,
     easing: 'easeOutExpo',

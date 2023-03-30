@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref} from 'vue'
 import { Heart, HandHeart, BatteryFull } from './atoms/icons'
 import {
   framerLogo,
@@ -7,10 +8,34 @@ import {
   instagramLogo,
   slackLogo,
 } from '../assets'
+import anime from 'animejs'
+
+const sectionTest = ref()
+
+onMounted(() => {
+  // Cria o observer de interseção
+  const observer = new IntersectionObserver((entries) => {
+    // Para cada entrada no observer
+    entries.forEach((entry) => {
+      // Se a entrada está visível na tela
+      if (entry.isIntersecting) {
+        // Executa a animação utilizando a função anime()
+        anime({
+          targets: sectionTest.value,
+          translateY: [100, 0],
+          duration: 4000,
+        })
+      }
+    })
+  })
+
+  // Adiciona o elemento a ser observado
+  observer.observe(sectionTest.value)
+})
 </script>
 
 <template>
-  <section class="top-inset-shadow bg-[#121316] relative py-[100px] w-screen">
+  <section ref="sectionTest" class="top-inset-shadow bg-[#121316] relative py-[100px] w-screen">
     <div
       class="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center"
     >
