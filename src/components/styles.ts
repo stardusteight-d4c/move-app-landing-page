@@ -46,3 +46,32 @@ export const companiesStyles = {
   heading4: `font-bold`,
   cardTxt: `text-center text-sm font-medium text-white/70`,
 }
+
+export const jumpstartStyles = {
+  wrapper: `bottom-inset-shadow bg-[#121316] py-[100px] w-screen`,
+  container: `max-w-7xl justify-center flex flex-col-reverse md:flex-row px-4 gap-x-[50px] mx-auto`,
+  firstSectionContainer: `hidden llg:flex flex-col items-center gap-y-[50px]`,
+  handleDefaultCard: (backgroundImage: string) => {
+    return `${backgroundImage} card-animate card-default-jumpstart shadow-drop`
+  },
+  defaultCardContent: `card-info-jumpstart mt-[100%]`,
+  secondSectionContainer: `flex flex-col items-center gap-y-[50px]`,
+  cardSmallJumpstart: {
+    wrapper: `card-animate card-small-jumpstart shadow-drop`,
+    heading2: `flex items-center font-bold text-[22px] gap-x-[10px] mb-[20px]`,
+    paragraph: `font-medium text-sm w-[260px] mb-[20px]`,
+    cardInfo: `card-info-jumpstart items-center`,
+  },
+  cardInfo: `card-animate card-info-jumpstart shadow-drop max-w-[300px] items-center`,
+  thirdSection: {
+    wrapper: `max-w-[400px] md:w-[400px] mx-auto md:mx-0 text-center flex flex-col gap-y-[31px]`,
+    rocketIcon: `w-[60px] h-[60px] mx-auto text-[#BB66CC]`,
+    heading2: `font-extrabold text-4xl md:text-[50px] !leading-[1.2]`,
+    paragraph: `text-lg !leading-[1.2]`,
+    learnMoreButton: `button-learn-more-jumpstart mx-auto uppercase text-black font-semibold flex items-center gap-x-4`,
+    divider: `h-0 border-t w-1/2 my-[30px] border-t-[#FFFFFF20] mx-auto`,
+    darkCard: `shadow-drop max-w-[300px] mx-auto md:max-w-none mb-20 md:mb-0 col-span-1 flex flex-col gap-y-[10px] w-full items-center justify-center bg-[#00000066] rounded-[25px] py-[30px] px-[20px]`,
+    heading4: `font-bold`,
+    text: `text-center text-sm font-medium text-white/70`,
+  },
+}

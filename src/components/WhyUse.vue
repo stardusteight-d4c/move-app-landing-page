@@ -10,7 +10,7 @@ import { undrawCollaborators } from '../assets'
 </script>
 
 <template>
-  <section class="bg-wallpaper-2 bg-cover py-[100px] w-screen">
+  <section class="bg-wallpaper-2 relative z-10 bg-cover py-[100px] w-screen">
     <div
       class="max-w-7xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center gap-x-[50px] llg:gap-x-[18px] xl:gap-x-[50px]"
     >

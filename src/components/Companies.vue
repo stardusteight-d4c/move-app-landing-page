@@ -27,7 +27,7 @@ function handleObserver() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (entry.target.id === 'section') {
+          if (entry.target.id === 'companies') {
             anime({
               targets: `#${entry.target.id}`,
               opacity: [0, 1],
@@ -62,7 +62,7 @@ function handleObserver() {
 </script>
 
 <template>
-  <section id="section" ref="sectionEl" :class="css.wrapper">
+  <section id="companies" ref="sectionEl" :class="css.wrapper">
     <div :class="css.container">
       <div :class="css.headingContainer">
         <h2 ref="headingTwo" id="heading-two" :class="css.heading2">
