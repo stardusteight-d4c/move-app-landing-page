@@ -45,7 +45,7 @@ function handleObserver() {
           } else if (entry.target.id === 'workout-card') {
             anime({
               targets: percentage,
-              value: 101,
+              value: 100,
               round: 1,
               easing: 'linear',
               duration: 5000,
