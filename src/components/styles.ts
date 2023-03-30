@@ -180,3 +180,23 @@ export const plansStyles = {
   headingFaq: `font-extrabold text-4xl md:text-[50px] mb-[30px] relative z-50`,
   faqItemsContainer: `flex flex-col items-center justify-center gap-y-[30px] w-full`,
 }
+
+export const footerStyles = {
+  wrapper: `top-inset-shadow py-[100px]`,
+  contentContainer: `flex px-4 flex-col items-center justify-center gap-y-[30px]`,
+  authorImage: `w-[64px] h-[64px] object-cover rounded-full mx-auto`,
+  itemsWrapper: `flex flex-col-reverse llg:flex-row gap-x-[56px] w-full sm:w-auto`,
+  itemsContainer: `flex mx-auto w-fit flex-col sm:flex-row sm:w-auto items-start gap-y-[17px] sm:gap-y-0 sm:items-center justify-center gap-x-[56px] mt-[30px] llg:mb-0`,
+  unorderedList: `flex flex-col gap-y-[17px]`,
+  listItem: `effect-underline relative flex items-center gap-x-[10px] font-bold text-sm uppercase cursor-pointer`,
+  formContainer: `newsletter-box w-full sm:w-auto`,
+  formSubscribeSpan: `font-bold uppercase text-sm`,
+  inputBtnContainer: `w-full sm:w-auto flex flex-col sm:flex-row items-center gap-[10px]`,
+  input: `w-full sm:max-w-[360px] bg-[#ebebeb] p-[15px] rounded-lg text-black outline-none font-medium text-lg`,
+  btn: `bg-black whitespace-nowrap p-[16px] rounded-lg font-bold text-lg`,
+  spanSpam: `text-white/70 text-sm font-medium`,
+  divider: `h-0 mx-auto border-t w-1/2 my-[30px] border-t-[#FFFFFF20]`,
+  copyrightContainer: `flex items-center flex-col sm:flex-row justify-center gap-x-[20px]`,
+  spanCopy: `font-medium text-center mb-[30px] sm:mb-0`,
+  link: `effect-underline relative uppercase font-medium`,
+}

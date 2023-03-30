@@ -682,3 +682,21 @@ body {
   flex-wrap: wrap;
   border-radius: 24px 24px 24px 0px;
 }
+
+/* Footer */
+.newsletter-box {
+  height: min-content; /* 196px */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 25px;
+}
