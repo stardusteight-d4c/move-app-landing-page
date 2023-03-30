@@ -111,3 +111,30 @@ export const whyUseStyles = {
     menAvatar: `round-user-why-use bg-men bottom-2 left-12 z-0`,
   },
 }
+
+export const getTheAppStyles = {
+  wrapper: `top-inset-shadow bg-[#121316] py-[100px] w-screen`,
+  container: `flex flex-col-reverse lg:flex-row items-center justify-center px-4 gap-y-20 lg:gap-y-0 gap-x-[134px]`,
+  firstContent: {
+    wrapper: `md:w-[565px] md:h-[620px]`,
+    container: `relative w-fit h-fit`,
+    cardContainer: `card-big-get-the-app hidden md:flex z-50 -bottom-16 -right-[300px]`,
+    cardContent: `background-image-get-the-app`,
+    spanFlexContainer: `flex items-center gap-x-[10px] absolute bottom-4 left-4`,
+    cardSpan: `span-glassmorphism-get-the-app cursor-default uppercase font-semibold`,
+    priceSpan: `span-price-get-the-app absolute -bottom-5 right-4`,
+    heading3: `font-bold text-[22px] mt-[20px] ml-4`,
+    circleContainer: `relative mt-28 ml-28 hidden md:flex items-center justify-center`,
+    handleCircles: (data: { circleCSS: string; index: string }) => {
+      return `${data.circleCSS} ${data.index} absolute`
+    },
+    round: `round-get-the-app absolute`,
+  },
+  secondContent: {
+    wrapper: `max-w-[500px] lg:w-[400px] flex flex-col gap-y-[31px]`,
+    medalIcon: `text-[#FF7697] w-[60px] h-[60px]`,
+    heading2: `text-4xl md:text-[50px] font-extrabold !leading-[1.2]`,
+    text: `text-lg`,
+    gradientBtn: `button-gradient-get-the-app flex items-center gap-x-4 text-black font-semibold`,
+  },
+}
