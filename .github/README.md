@@ -70,6 +70,6 @@ Framer offers a wide range of resources and libraries to help designers and deve
 Although Framer is a paid tool, its intuitive interface and advanced features make it a popular choice for designers and developers who want to create sophisticated and engaging user interfaces.
 
 
-![screen](/screens/screen-desktop.png)
+![screen](./screenshots/screen-desktop.png)
 
 <p align="center">Project made with :blue_heart: by <a href="https://github.com/stardusteight-d4c">Gabriel Sena</a>, design reference/design by <a href="https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g" target="_blank">DesignCode</a> and <a href="https://www.framer.com" target="_blank">Framer</a></p>
